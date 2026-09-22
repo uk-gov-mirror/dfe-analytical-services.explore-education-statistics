@@ -79,7 +79,7 @@ export default withMethods({
           'lastUpdated',
           'api',
           'numDataFileRows',
-          'geographicLevelsLabels',
+          'geographicLevelDetails',
           'indicators',
           'filters',
           'releaseType',
