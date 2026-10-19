@@ -89,6 +89,8 @@ await RestartImports();
 await host.RunAsync();
 return;
 
+// @MarkFix This loads the StatsDB location cache directly at startup, outside IStorageDataSetWriter. Remove it
+// once ParquetV1DataSetWriter stops writing meta and locations to the StatsDB (after footnotes etc. are migrated).
 void LoadLocationCache()
 {
     var dbContextSupplier = host.Services.GetRequiredService<IDbContextSupplier>();
